@@ -10,7 +10,16 @@ import { setFormPage } from "../redux/appSlice";
 
 const PropertyListingForm = () => {
   const { propertyDetail } = useSelector((state) => state.propertyDetail);
+  const { locationDetail } = useSelector((state) => state.locationDetail);
+  const { features } = useSelector((state) => state.features);
+  const { priceDetail } = useSelector((state) => state.priceDetail);
+  const { propertyImages } = useSelector((state) => state.propertyImages);
   console.log(propertyDetail);
+  console.log(locationDetail);
+  console.log(features);
+  console.log(priceDetail);
+  console.log(propertyImages);
+
   return (
     <div className="px-3 md:px-[27px] py-[11px] ">
       <div className="mb-[23px]  flex justify-end">
@@ -48,7 +57,16 @@ const Form = () => {
         return <p>No Form</p>;
     }
   };
-  return <>{getForm()}</>;
+  return (
+    <>
+      {/* {getForm()} */}
+      {/* <PropertyDetails /> */}
+      {/* <LocationDetails /> */}
+      {/* <FeaturesDetails /> */}
+      {/* <PriceDetails /> */}
+      <PropertyImages />
+    </>
+  );
 };
 
 export default PropertyListingForm;

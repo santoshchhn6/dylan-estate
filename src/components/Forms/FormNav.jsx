@@ -4,7 +4,7 @@ const FormNav = ({ children, handleNext }) => {
       <h1 className=" w-[inherit] h-[68px] text-[rgb(18,43,73)] bg-[#FCF8F4] font-mws text-[20px] pt-[15.5px] pl-[68px] pb-[17.5px]">
         LETS GET YOU STARTED!
       </h1>
-      <div className="flex-grow flex px-[80px] py-[36px]  overflow-y-auto bg-white  text-black ">
+      <div className="flex-grow flex px-[78px] py-[36px]  overflow-y-auto bg-white  text-black ">
         {children}
       </div>
       <div className=" w-[inherit] min-h-[63px] px-[32px]  font-inter bg-[#FCF8F4] flex items-center justify-between">

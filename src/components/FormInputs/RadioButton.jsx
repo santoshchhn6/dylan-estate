@@ -19,22 +19,15 @@ const RadioButton = ({
   const inputError = findInputError(errors, name);
   const isInvalid = isFormInvalid(inputError);
 
-  // const handleOnClick = (value) => {
-  //   console.log(value);
-  // };
-
   return (
     <InputError inputError={inputError} isInvalid={isInvalid}>
       <div className="w-full">
         <h1 className="mb-[16px] text-[18px] font-medium">
           <span className="text-[#FF4D4F]">* </span> {label} :
         </h1>
-        <div className="w-full flex flex-wrap gap-[10px]  pl-[8px]">
+        <div className="w-full flex flex-wrap sm:flex-nowrap gap-[10px]  pl-[8px]">
           {options?.map((e) => (
-            <div
-              key={e?.value}
-              className="w-[229px] flex items-center gap-[23px]"
-            >
+            <div key={e?.value} className="w-[229px] flex gap-[23px]">
               <input
                 id={e?.value}
                 type="radio"

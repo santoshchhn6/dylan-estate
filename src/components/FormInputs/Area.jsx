@@ -16,11 +16,11 @@ export const Area = ({ label, name }) => {
   return (
     <InputError inputError={inputError} isInvalid={isInvalid}>
       <div className=" flex flex-col">
-        <label htmlFor={name} className="text-[16px] font-medium">
+        <label htmlFor={name} className="text-[16px] font-medium mb-[8px]">
           {label}
-          <span className="text-[#FF4D4F] mb-[8px]"> *</span>
+          <span className="text-[#FF4D4F] "> *</span>
         </label>
-        <div className="w-[380px] flex justify-between py-[9px] px-[12px] text-[14px] font-inter bg-white border rounded-[2px] border-[#7A7A7A]">
+        <div className="w-[380px] h-[40px] flex justify-between py-[9px] px-[12px] text-[14px] font-inter bg-white border rounded-[2px] border-[#7A7A7A]">
           <input
             id={name}
             name={name}

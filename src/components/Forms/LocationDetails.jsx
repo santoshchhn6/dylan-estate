@@ -1,23 +1,17 @@
-import {
-  email_validation,
-  name_validation,
-} from "../../utils/inputValidations";
 import { FormProvider, useForm } from "react-hook-form";
 import { Input } from "../FormInputs/Input";
-import RadioButton from "../FormInputs/RadioButton";
-import { Phone } from "../FormInputs/Phone";
-import { Select } from "../FormInputs/Select";
+
 import { useDispatch } from "react-redux";
-import { setSeller } from "../../redux/sellerSlice";
 import FormTab from "./FormTab";
+import Padding from "../Padding";
+import { setLocationDetail } from "../../redux/locationDetail";
 
 const LocationDetails = ({ handleNext }) => {
   const methods = useForm();
   const dispatch = useDispatch();
 
   const handleSubmit = methods.handleSubmit((inputs) => {
-    console.log(inputs);
-    dispatch(setSeller(inputs));
+    dispatch(setLocationDetail(inputs));
     handleNext();
   });
 
@@ -26,52 +20,45 @@ const LocationDetails = ({ handleNext }) => {
       <FormProvider {...methods}>
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="flex flex-col gap-5 items-center text-black bg-white w-[380px] space-y-[60px]"
+          className="flex flex-col gap-5  text-black bg-white  space-y-[60px]"
         >
-          {/* <RadioInputWhoAmI />
-          <Input {...name_validation} />
-          <CountryInput />
-          <div className="space-y-[16px] w-full">
-            <Phone name="phone" label="Phone" />
-            <p className="text-[16px] font-medium">OR</p>
-            <Input {...email_validation} />
-          </div> */}
-          Location Details
+          <div className="flex flex-wrap lg:flex-nowrap gap-[60px] ">
+            <Input
+              type="text"
+              name="building_name"
+              label={"Building/Society Name"}
+              placeholder={"Enter Apartment Name"}
+              validation={{ required: "Enter Apartment Name" }}
+            />
+            <Input
+              type="text"
+              name="locality"
+              label={"Locality/Area"}
+              placeholder={"Eg:sheetal nagar"}
+              validation={{ required: "Enter Locality" }}
+            />
+          </div>
+          <div className="flex flex-wrap lg:flex-nowrap gap-[60px] ">
+            <Input
+              type="text"
+              name="landmark_name"
+              label={"Landmark/Street Name"}
+              placeholder={"Prominent Landmark"}
+              validation={{ required: "Enter Landmark" }}
+            />
+            <Input
+              type="text"
+              name="city"
+              label={"City"}
+              placeholder={"Mumbai, Maharashtra"}
+              validation={{ required: "Enter City" }}
+            />
+          </div>
+          <Padding />
         </form>
       </FormProvider>
     </FormTab>
   );
-};
-
-const RadioInputWhoAmI = () => {
-  const options = [
-    {
-      value: "owner",
-      label: "Owner",
-    },
-    {
-      value: "builder",
-      label: "Builder",
-    },
-  ];
-  return <RadioButton name="iam" label="I am" options={options} />;
-};
-
-const CountryInput = () => {
-  const countries = [
-    "Afghanistan",
-    "Bangladesh",
-    "Bhutan",
-    "China",
-    "India",
-    "Maldives",
-    "Myanmar",
-    "Nepal",
-    "Pakistan",
-    "Sri Lanka",
-  ];
-
-  return <Select name={"country"} label="Country" options={countries} />;
 };
 
 export default LocationDetails;

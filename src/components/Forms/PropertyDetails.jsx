@@ -18,6 +18,7 @@ import RadioButton3 from "../FormInputs/RadioButton3";
 import { useState } from "react";
 import { setPropertyType } from "../../redux/formSlice";
 import { setPropertyDetail } from "../../redux/propertyDetailSlice";
+import Padding from "../Padding";
 
 const PropertyDetails = ({ handleNext }) => {
   const methods = useForm();
@@ -82,6 +83,7 @@ const PropertyDetails = ({ handleNext }) => {
             label={"Property Description"}
             validation={{ required: "Enter Property Description" }}
           />
+          <Padding />
         </form>
       </FormProvider>
     </FormTab>

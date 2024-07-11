@@ -10,6 +10,7 @@ import { Select } from "../FormInputs/Select";
 import FormNav from "./FormNav";
 import { useDispatch } from "react-redux";
 import { setSeller } from "../../redux/sellerSlice";
+import Padding from "../Padding";
 
 const UserDetail = ({ handleNext }) => {
   const methods = useForm();
@@ -36,6 +37,7 @@ const UserDetail = ({ handleNext }) => {
             <p className="text-[16px] font-medium">OR</p>
             <Input {...email_validation} />
           </div>
+          <Padding />
         </form>
       </FormProvider>
     </FormNav>

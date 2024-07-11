@@ -37,7 +37,7 @@ const Tabs = () => {
     },
     {
       id: 3,
-      label: "FEATURES DETAILS",
+      label: "FEATURES & AMENITIES",
     },
     {
       id: 4,
