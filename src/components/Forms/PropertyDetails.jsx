@@ -72,8 +72,8 @@ const PropertyDetails = ({ handleNext }) => {
           <RadioPropertyAge />
           <RadioBHKType />
           <RadioBathroomsType />
-          <RadioBalcony />
-          <RadioTenantPreference />
+          {/* <RadioBalcony /> */}
+          {/* <RadioTenantPreference /> */}
           <RadioAvailability />
           <TextArea
             name={"property_description"}

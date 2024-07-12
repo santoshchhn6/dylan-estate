@@ -59,12 +59,12 @@ const Form = () => {
   };
   return (
     <>
-      {/* {getForm()} */}
+      {getForm()}
       {/* <PropertyDetails /> */}
       {/* <LocationDetails /> */}
       {/* <FeaturesDetails /> */}
       {/* <PriceDetails /> */}
-      <PropertyImages />
+      {/* <PropertyImages /> */}
     </>
   );
 };

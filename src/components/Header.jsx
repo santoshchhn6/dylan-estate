@@ -8,7 +8,7 @@ import user from "../assets/images/user.svg";
 
 const Header = () => {
   return (
-    <div className="w-full px-[60px] flex gap-3  py-5 ">
+    <div className="w-full px-[60px] flex gap-3  py-5 bg-[#FCF8F4]">
       <SmallMenu />
       <div className=" w-full flex flex-wrap justify-center xl:justify-between items-center">
         <Logo />

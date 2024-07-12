@@ -1,15 +1,15 @@
 export const navlist = [
   {
     title: "PROPERTIES",
-    to: "/",
+    to: "/properties",
   },
   {
     title: "MY DASHBOARD/ACTIVITY",
-    to: "/",
+    to: "/dashboard",
   },
   {
     title: "LIST YOUR PROPERTY",
-    to: "/",
+    to: "/property_preview",
   },
   {
     title: "CONTACT US",
